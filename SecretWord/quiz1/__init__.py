@@ -24,14 +24,3 @@ palabra = input("Ingrese la palabra: ").lower()
 if palabra not in palabra_secreta:
     print("Incorrecto! Se te acabaron los intentos.")
     intentos += 1
-
-
-
-
-
-
-
-
-
-
-

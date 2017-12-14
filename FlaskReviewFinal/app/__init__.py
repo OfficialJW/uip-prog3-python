@@ -2,16 +2,13 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    return render_template('index.html')
+@app.route("/<name>")
+def index(name=None):
+    return render_template('Review.html', name=name)
 
-@app.route("/puntaje")
-def stars():
-    return("Puntaje (estrellas)")
-
-@app.route("/comentario")
-def commentary():
-    return("Pagina de Comentario")
+@app.route("/end")
+def end():
+    return render_template('return.html')
 
 if __name__ == "__main__":
     app.run()
